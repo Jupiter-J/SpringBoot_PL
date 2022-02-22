@@ -1,8 +1,11 @@
 # The Origin: Java Spring Boot
 ### 학습기간 :  22.01.26 ~ 22.04.06
-### 학습목표 : 스프링부트로 API를 자유롭게 생성할 수 있도록 학습하기
+#### [✨ 2차 미션수행 ✨](Mision_result.md)
+<br>
+<br>
 
 
+### 목차
 Chapter 4. CRUD & DATA (1)
 * CRUD
 * CRUD & REST
