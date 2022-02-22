@@ -11,7 +11,7 @@ import java.util.List;
 public class BoardInMemoryRepository implements BoardRepository{
     private static final Logger logger = LoggerFactory.getLogger(BoardInMemoryRepository.class);
     private final List<BoardDto> boardList;
-    private final List<PostDto> postList;
+//    private final List<PostDto> postList;
 //    private List<BoardDto> postLists;
 //    private JSONArray bothArray;
 
@@ -20,7 +20,7 @@ public class BoardInMemoryRepository implements BoardRepository{
     public BoardInMemoryRepository(){
         this.boardList = new ArrayList<>();
 //        boardList.add((BoardDto) postLists);
-        this.postList = new ArrayList<>();
+//        this.postList = new ArrayList<>();
 //        this.bothArray = new JSONArray();
 //        bothArray.add(boardList);
 //        bothArray.add(postList);
@@ -28,6 +28,7 @@ public class BoardInMemoryRepository implements BoardRepository{
 
     @Override
     public boolean save(BoardDto dto) {
+
         return this.boardList.add(dto);
     }
 
@@ -54,43 +55,44 @@ public class BoardInMemoryRepository implements BoardRepository{
         return false;
     }
 
-//    @Override
-//    public boolean savep(BoardDto dto) {
-//        return false;
-//    }
+    @Override
+    public boolean savep(PostDto postDto) {
+        return this.boardList.add(postDto);
+    }
 
 
     //******************//
 
 
 
-  //  post
-    @Override
-    public boolean savep(PostDto dtop) {
-        return postList.add(dtop);
-    }
 
-    @Override
-    public List<PostDto> findAllp() {
-        return postList;
-    }
-
-    @Override
-    public PostDto findByIdp(int id) {
-        return postList.get(id);
-    }
-
-    @Override
-    public boolean deletep(int id) {
-        this.postList.remove(id);
-        return true;
-    }
-
-    @Override
-    public boolean updatep(int id, PostDto dtop) {
-        this.postList.set(id, dtop);
-        return false;
-    }
+//  //  post
+//    @Override
+//    public boolean savep(BoardDto dto) {
+//        return boardList.add(dto);
+//    }
+//
+//    @Override
+//    public List<PostDto> findAllp() {
+//        return postList;
+//    }
+//
+//    @Override
+//    public PostDto findByIdp(int id) {
+//        return postList.get(id);
+//    }
+//
+//    @Override
+//    public boolean deletep(int id) {
+//        this.postList.remove(id);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean updatep(int id, PostDto dtop) {
+//        this.postList.set(id, dtop);
+//        return false;
+//    }
 
 
 

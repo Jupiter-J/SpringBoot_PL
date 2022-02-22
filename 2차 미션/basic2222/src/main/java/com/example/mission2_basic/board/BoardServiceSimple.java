@@ -10,29 +10,22 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class BoardServiceSimple implements BoardService{
+public class BoardServiceSimple implements BoardService {
     private static final Logger logger = LoggerFactory.getLogger(BoardServiceSimple.class);
     private final BoardRepository boardRepository;
 
     public BoardServiceSimple(
             @Autowired BoardRepository boardRepository
-    ){
-       this.boardRepository = boardRepository;
+    ) {
+        this.boardRepository = boardRepository;
     }
 
-//    @Override
-//    public void createBoard(BoardDto dto) {
-//        if(!this.boardRepository.save(dto)){
-//            throw new RuntimeException("save failed");
-//        }
-//
-//    }
-
     @Override
-    public void createBoard(int id, BoardDto dto) {
-        if(!this.boardRepository.save(dto)){
+    public void createBoard(BoardDto dto) {
+        if (!this.boardRepository.save(dto)) {
             throw new RuntimeException("save failed");
         }
+
     }
 
     @Override
@@ -62,6 +55,14 @@ public class BoardServiceSimple implements BoardService{
         this.boardRepository.delete(id);
     }
 
+    @Override
+    public void createBoard(PostDto postDto) {
+        if (!this.boardRepository.savep(postDto)) {
+            throw new RuntimeException("save failed");
+        }
+    }
+}
+
 //    @Override
 //    public void createPost(BoardDto dto) {
 //        if(!this.boardRepository.save(dto)){
@@ -74,36 +75,34 @@ public class BoardServiceSimple implements BoardService{
 
 
 
-    //post
-    @Override
-    public void createPost(PostDto dtop) {
-        if(!this.boardRepository.savep(dtop)){
-            throw new RuntimeException("save failed");
-        }
-
-    }
-
-
-
-    @Override
-    public List<PostDto> readPostAll() {
-        return this.boardRepository.findAllp();
-    }
-
-    @Override
-    public PostDto readPost(int id) {
-        return this.boardRepository.findByIdp(id);
-    }
-
-    @Override
-    public void updatePost(int id, PostDto dtop) {
-        this.boardRepository.updatep(id,dtop);
-    }
-
-    @Override
-    public void deletePost(int id) {
-        this.boardRepository.deletep(id);
-    }
-
-
-}
+//    //post
+//    @Override
+//    public void createPost(PostDto dtop) {
+//        if(!this.boardRepository.save(dtop)){
+//            throw new RuntimeException("save failed");
+//        }
+//
+//    }
+//
+//
+//
+//    @Override
+//    public List<PostDto> readPostAll() {
+//        return this.boardRepository.findAll();
+//    }
+//
+//    @Override
+//    public BoardDto readPost(int id) {
+//        return this.boardRepository.findByIdp(id);
+//    }
+//
+//    @Override
+//    public void updatePost(int id, BoardDto dtop) {
+//        this.boardRepository.updatep(id,dto);
+//    }
+//
+//    @Override
+//    public void deletePost(int id) {
+//        this.boardRepository.deletep(id);
+//    }
+//}

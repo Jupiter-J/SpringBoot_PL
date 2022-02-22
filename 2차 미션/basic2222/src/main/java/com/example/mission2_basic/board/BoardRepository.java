@@ -9,15 +9,11 @@ public interface BoardRepository {
     boolean delete(int id);
     boolean update(int id, BoardDto dto);
 
+    boolean savep(PostDto postDto);
 
 
     //post
-    boolean savep (PostDto dto);
-//    boolean savep (BoardDto dto);
-    List<PostDto> findAllp();
-    PostDto findByIdp(int id);
-    boolean deletep(int id);
-    boolean updatep(int id, PostDto dtop);
+//    boolean savep (PostDto dto);
 
 
 

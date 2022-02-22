@@ -6,7 +6,6 @@ import java.util.List;
 public class BoardDto {
 
     private String boardName;
-    private int boardId;
     private List<PostDto> postLists;
 
     public BoardDto(PostDto title, PostDto content, PostDto userName, PostDto password) {
@@ -21,13 +20,6 @@ public class BoardDto {
         this.boardName = boardName;
     }
 
-    public int getBoardId() {
-        return boardId;
-    }
-
-    public void setBoardId(int boardId) {
-        this.boardId = boardId;
-    }
 
     public String getBoardName() {
         return boardName;

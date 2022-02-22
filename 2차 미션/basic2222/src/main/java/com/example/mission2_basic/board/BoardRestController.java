@@ -22,18 +22,26 @@ public class BoardRestController {
 
 
     //8080:/boards
-    @PostMapping("{id}")
-    public void createBoard(@PathVariable("id") int id,@RequestBody BoardDto boardDto){
+    @PostMapping()
+    public void createBoard(@RequestBody BoardDto boardDto){
         logger.info(boardDto.toString());
-        this.boardService.createBoard(id, boardDto);
+        this.boardService.createBoard(boardDto);
 
     }
+
+    @PostMapping("/posts")
+    public void createPost(@RequestBody PostDto postDto){
+        logger.info(postDto.toString());
+        this.boardService.createBoard(postDto);
+    }
+
 
     @GetMapping()
     public List<BoardDto> readBoardAll(){
         logger.info("in read board all");
         return this.boardService.readBoardAll();
     }
+
 
    @GetMapping("/test")
     public JSONArray readAll(){
@@ -64,12 +72,12 @@ public class BoardRestController {
 
     //******************//
 
-    //post
-    @PostMapping("/posts")
-    public void createPost(@RequestBody PostDto postDto){
-        logger.info(postDto.toString());
-        this.boardService.createPost(postDto);
-    }
+//    //post
+//    @PostMapping("/posts")
+//    public void createPost(@RequestBody PostDto postDto){
+//        logger.info(postDto.toString());
+//        this.boardService.createBoard(postDto);
+//    }
 
 //    @PostMapping("/posts")
 //    public void createPost(@RequestBody BoardDto boardDto){
@@ -78,30 +86,30 @@ public class BoardRestController {
 //
 //    }
 
-    @GetMapping("/posts")
-    public List<PostDto> readPostAll(){
-        logger.info("in read post all");
-        return this.boardService.readPostAll();
-    }
-
-    @GetMapping("/posts/{id}")
-    public PostDto readPost(@PathVariable("id") int id){
-        logger.info("in read post");
-        return this.boardService.readPost(id);
-    }
-
-    @PutMapping("/posts/{id}")
-    public void updatePost(@PathVariable("id") int id,
-                           @RequestBody PostDto postDto){
-        this.boardService.updatePost(id, postDto);
-
-    }
-
-    @DeleteMapping("/posts/{id}")
-    public void deletePost(@PathVariable("id") int id,
-                           @PathVariable("password") String password){
-        this.boardService.deletePost(id);
-    }
+//    @GetMapping("/posts")
+//    public List<PostDto> readPostAll(){
+//        logger.info("in read post all");
+//        return this.boardService.readPostAll();
+//    }
+//
+//    @GetMapping("/posts/{id}")
+//    public PostDto readPost(@PathVariable("id") int id){
+//        logger.info("in read post");
+//        return this.boardService.readPost(id);
+//    }
+//
+//    @PutMapping("/posts/{id}")
+//    public void updatePost(@PathVariable("id") int id,
+//                           @RequestBody PostDto postDto){
+//        this.boardService.updatePost(id, postDto);
+//
+//    }
+//
+//    @DeleteMapping("/posts/{id}")
+//    public void deletePost(@PathVariable("id") int id,
+//                           @PathVariable("password") String password){
+//        this.boardService.deletePost(id);
+//    }
 
 
 
