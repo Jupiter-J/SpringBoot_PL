@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO MMapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-2-mapper.dtd">
+<mapper namespace="">
+    <insert id="createPost" parameterType="com.example.database.Post"
+</mapper>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+</beans>
