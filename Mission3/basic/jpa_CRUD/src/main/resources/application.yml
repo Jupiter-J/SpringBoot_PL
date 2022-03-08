@@ -1,0 +1,18 @@
+
+spring:
+  profiles:
+    active: local
+
+
+#외부 API를 사용할때
+custom:
+  property:
+    single: custom-proerty
+    comlist: comma,sperated,list,to,value
+
+#    ncp:
+#      id: api-id
+#      key: api-key
+#      url: http://ncp.com/
+#
+
