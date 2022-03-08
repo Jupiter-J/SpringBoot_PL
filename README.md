@@ -1,7 +1,7 @@
 # The Origin: Java Spring Boot
 ### 학습기간 :  22.01.26 ~ 22.04.06
 #### [✨ 2차 미션수행 ✨](Mision2_result.md)
-#### [✨ 3차 미션수행 ✨]()
+#### [✨ 3차 미션수행 ✨](Misson3_result.md)
 <br>
 <br>
 
