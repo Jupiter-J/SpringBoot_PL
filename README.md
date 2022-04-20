@@ -6,7 +6,24 @@
 <br>
 <br>
 
+### [가게리뷰 사이트](https://github.com/Jupiter-J/ShopBoard.git)
+* 2022-03-29 ~ 2022-04-01
+* 가게 리뷰 사이트에 대한 api 구현
 
+
+### [Spring Security 로그인페이지 ](https://github.com/Jupiter-J/SpringSecurity.git)
+* 2022-03-20 ~ 2022-03-26
+* 회원가입, 로그인, 로그아웃 페이지 구현
+* Oauth2.0 기능 추가 
+
+
+
+### [CRUD RestfulAPI 게시판 제작](https://github.com/Jupiter-J/CRUD_API_SpringBoard.git)
+* 2022-03-14 ~ 2022-03-25
+* JPA를 사용한 CRUD API 게시판
+
+
+<br>
 ### 목차
 Chapter 4. CRUD & DATA (1)
 * CRUD
