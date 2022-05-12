@@ -6,6 +6,8 @@
 <br>
 <br>
 
+## 프로젝트 정리
+
 ### [가게리뷰 사이트](https://github.com/Jupiter-J/ShopBoard.git)
 * 2022-03-29 ~ 2022-04-01
 * 가게 리뷰 사이트에 대한 api 구현
